@@ -1,0 +1,31 @@
+{
+  "name": "rayo-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon --watch src -e js,json --exec node -r dotenv/config -r sucrase/register src/index.js dotenv_config_path=src/.env",
+    "build": "sucrase src -d dist --transforms imports",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rayo/compress": "^1.1.24",
+    "@rayo/send": "^1.0.23",
+    "body-parser": "^1.20.0",
+    "http-errors": "^2.0.0",
+    "rayo": "^1.3.10"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "eslint": "^8.22.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.19",
+    "sucrase": "^3.25.0"
+  }
+}
